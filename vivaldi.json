@@ -1,0 +1,51 @@
+{
+    "title": "Vivaldi",
+    "rules": [
+        {
+            "description": "新規タブを開くでなぜか ] だと反応しないので別のキーを経由させる（順番は一番上にしてね） (only Vivaldi)",
+            "manipulators": [{
+                "type": "basic",
+                "from": {
+                    "key_code": "backslash",
+                    "modifiers": {
+                        "mandatory": ["left_control"]
+                    }
+                },
+                "to": {
+                    "key_code": "t",
+                    "modifiers": ["command"]
+                },
+                "conditions": [{
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                        "^com\\.vivaldi\\.Vivaldi",
+                        "^com\\.vivaldi\\.Vivaldi¥.snapshot"
+                    ]
+                }]
+            }]
+        },
+        {
+            "description": "ページ最上部へ移動の1キーをdeleteにしちゃってる対応（順番は一番上にしてね） (only Vivaldi)",
+            "manipulators": [{
+                "type": "basic",
+                "from": {
+                    "key_code": "delete_forward",
+                    "modifiers": {
+                        "mandatory": ["left_control"]
+                    }
+                },
+                "to": {
+                    "key_code": "1",
+                    "modifiers": ["command"]
+                },
+                "conditions": [{
+                    "type": "frontmost_application_if",
+                    "bundle_identifiers": [
+                        "^com\\.vivaldi\\.Vivaldi",
+                        "^com\\.vivaldi\\.Vivaldi¥.snapshot"
+                    ]
+                }]
+            }]
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "title": "",
+    "rules": [{
+        "description": "日本語入力のON/OFFトグル",
+        "manipulators": [{
+            "type": "basic",
+            "from": {
+                "key_code": "f20"
+            },
+            "to": {
+                "key_code": "spacebar",
+                "modifiers": ["control"]
+            }
+        }]
+    }]
+}

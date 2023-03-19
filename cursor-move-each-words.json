@@ -1,0 +1,65 @@
+{
+    "title": "",
+    "rules": [
+        {
+            "description": "[左下] + [左右矢印] で単語区切りでカーソル移動する",
+            "manipulators": [{
+                "type": "basic",
+                "from": {
+                    "key_code": "left_arrow",
+                    "modifiers": {
+                        "mandatory": ["left_control"],
+                        "optional": ["shift"]
+                    }
+                },
+                "to": {
+                    "key_code": "left_arrow",
+                    "modifiers": ["right_option"]
+                }
+            }, {
+                "type": "basic",
+                "from": {
+                    "key_code": "right_arrow",
+                    "modifiers": {
+                        "mandatory": ["left_control"],
+                        "optional": ["shift"]
+                    }
+                },
+                "to": {
+                    "key_code": "right_arrow",
+                    "modifiers": ["right_option"]
+                }
+            }]
+        },
+        {
+            "description": "[左下] + [左下2] + [左右矢印] のときには行頭行末範囲選択も可能にさせる",
+            "manipulators": [{
+                "type": "basic",
+                "from": {
+                    "key_code": "left_arrow",
+                    "modifiers": {
+                        "mandatory": ["left_option"],
+                        "optional": ["shift"]
+                    }
+                },
+                "to": {
+                    "key_code": "left_arrow",
+                    "modifiers": ["right_control"]
+                }
+            }, {
+                "type": "basic",
+                "from": {
+                    "key_code": "right_arrow",
+                    "modifiers": {
+                        "mandatory": ["left_option"],
+                        "optional": ["shift"]
+                    }
+                },
+                "to": {
+                    "key_code": "right_arrow",
+                    "modifiers": ["right_control"]
+                }
+            }]
+        }
+    ]
+}

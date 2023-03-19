@@ -1,0 +1,84 @@
+{
+    "title": "VS Code",
+    "rules": [
+        {
+            "description": "Ctrl + Alt の配置でマルチカーソルする（[左下] + [左下3] でマルチカーソルが動作してしまうのを無効化もしている） (only VS Code)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "up_arrow",
+                        "modifiers": {
+                            "mandatory": ["left_control", "right_option"]
+                        }
+                    },
+                    "to": {
+                        "key_code": "up_arrow",
+                        "modifiers": ["left_control", "right_command"]
+                    },
+                    "conditions": [{
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.microsoft\\.VSCode"
+                        ]
+                    }]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "down_arrow",
+                        "modifiers": {
+                            "mandatory": ["left_control", "right_option"]
+                        }
+                    },
+                    "to": {
+                        "key_code": "down_arrow",
+                        "modifiers": ["left_control", "right_command"]
+                    },
+                    "conditions": [{
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.microsoft\\.VSCode"
+                        ]
+                    }]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "up_arrow",
+                        "modifiers": {
+                            "mandatory": ["left_control", "left_command"]
+                        }
+                    },
+                    "to": {
+                        "key_code": "escape"
+                    },
+                    "conditions": [{
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.microsoft\\.VSCode"
+                        ]
+                    }]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "down_arrow",
+                        "modifiers": {
+                            "mandatory": ["left_control", "left_command"]
+                        }
+                    },
+                    "to": {
+                        "key_code": "escape"
+                    },
+                    "conditions": [{
+                        "type": "frontmost_application_if",
+                        "bundle_identifiers": [
+                            "^com\\.microsoft\\.VSCode"
+                        ]
+                    }]
+                }
+            ]
+        }
+    ]
+}

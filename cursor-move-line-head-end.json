@@ -1,0 +1,31 @@
+{
+    "title": "",
+    "rules": [{
+        "description": "[左下2(option)] + [左右矢印] で行頭行末移動する",
+        "manipulators": [{
+            "type": "basic",
+            "from": {
+                "key_code": "left_arrow",
+                "modifiers": {
+                    "mandatory": ["left_option"]
+                }
+            },
+            "to": {
+                "key_code": "left_arrow",
+                "modifiers": ["command"]
+            }
+        }, {
+            "type": "basic",
+            "from": {
+                "key_code": "right_arrow",
+                "modifiers": {
+                    "mandatory": ["left_option"]
+                }
+            },
+            "to": {
+                "key_code": "right_arrow",
+                "modifiers": ["command"]
+            }
+        }]
+    }]
+}

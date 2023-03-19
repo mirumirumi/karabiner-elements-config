@@ -1,0 +1,19 @@
+{
+    "title": "",
+    "rules": [{
+        "description": "絵文字！！！",
+        "manipulators": [{
+            "type": "basic",
+            "from": {
+                "key_code": "period",
+                "modifiers": {
+                    "mandatory": ["command"]
+                }
+            },
+            "to": {
+                "key_code": "spacebar",
+                "modifiers": ["command", "control"]
+            }
+        }]
+    }]
+}
