@@ -1,7 +1,7 @@
 {
     "title": "",
     "rules": [{
-        "description": "日本語入力のON/OFFトグル",
+        "description": "日本語入力のON/OFFトグル（いまはインポートのやつ使ってるので未使用）",
         "manipulators": [{
             "type": "basic",
             "from": {
