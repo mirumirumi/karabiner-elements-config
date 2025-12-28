@@ -82,32 +82,32 @@
               }
             ]
           },
-          {
-            "type": "basic",
-            "conditions": [
-              {
-                "input_sources": [
-                  {
-                    "language": "en"
-                  }
-                ],
-                "type": "input_source_if"
-              }
+        {
+        "type": "basic",
+        "conditions": [
+            {
+            "input_sources": [
+                {
+                "language": "en"
+                }
             ],
-            "from": {
-              "key_code": "japanese_kana",
-              "modifiers": {
-                "optional": [
-                  "any"
-                ]
-              }
-            },
-            "to": [
-              {
-                "key_code": "japanese_kana"
-              }
+            "type": "input_source_if"
+            }
+        ],
+        "from": {
+            "key_code": "japanese_kana",
+            "modifiers": {
+            "optional": [
+                "any"
             ]
-          }
+            }
+        },
+        "to": [
+            {
+            "key_code": "japanese_kana"
+            }
+        ]
+        }
       ]
     }
   ]
